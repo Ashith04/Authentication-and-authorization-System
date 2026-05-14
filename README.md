@@ -29,10 +29,24 @@ API Endpoints
 - `PUT /api/users/:id` — update (owner or admin)
 - `DELETE /api/users/:id` — admin only
 
+Example for testing
+
+- `For register` -
+                      {
+                        "name": "Admin Person",
+                        "email": "admin@example.com",
+                        "password": "StrongPassword123!",
+                        "role": "admin"
+                      }
+- `For login` - 
+                      {
+                        "email": "admin@example.com",
+                        "password": "StrongPassword123!"
+                      }
+
 Notes
 
 - Passwords are hashed with `bcryptjs`.
 - JWTs are signed with `JWT_SECRET` and expire in 1 hour.
 - Keep `.env` secrets out of version control.
 
-If you want, I can also add a small Postman collection or a seed script to create an initial admin user.
